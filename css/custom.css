@@ -1,0 +1,696 @@
+
+/* Font-Family definition */
+@font-face {
+    font-family: 'droid-serif-bold';
+    src: url('../fonts/droid-serif-bold.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 500;
+	font-display: block;
+}
+
+@font-face {
+    font-family: 'Myriad-Pro-Regular';
+    src: url('../fonts/Myriad-Pro-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+}
+
+@font-face {
+    font-family: 'Verdana';
+    src: url('../fonts/Verdana.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+}
+
+body{
+	color: #000;
+	font-family: "Arial-Regular", sans-serif; 
+	font-size: 13px;
+}
+
+:focus {
+    outline: 0;
+}
+
+/* line below the sections */
+.line{
+	border-color: #c5c5c5;
+}
+
+.main-topics{
+	padding: 8px 20px;
+	margin-bottom: 10px;
+	background-image:
+    linear-gradient(
+      to right, 
+      #e6c36e,
+      #e6c36e 10px,
+      #f4eede 10px,
+      #f4eede 100%
+    );
+	color: #000;
+	font-family: 'droid-serif-bold';
+	font-weight: bold;
+	font-size: 1.2307692307692308em;
+	text-transform: capitalize;
+}
+
+.slick-prev,
+.slick-next{
+	z-index: 1;
+}
+
+.slick-prev:before,
+.slick-next:before{
+    content: '';
+}
+
+a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul{
+	list-style-type: none;
+}
+
+/**
+* #.# 1.1 HEADER Section
+*
+* Header section contains LOGO, GOOGLE SEARCH, and NAVBAR, (whether or not it has media queries, etc.)
+*/
+
+/* NAVBAR section text details */
+.navbar-nav > li > a{
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* Background-color for LOGO section*/
+.logo{
+	background-color: #eeeaeb;
+}
+
+/* To appply spacing around logo image */
+.logo  img{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* To align HOME/CONTACTUS links on same line */
+.logo ul {
+    display: table;
+}
+
+.logo li {
+    display: table-cell;
+}
+
+/* To remove the '|' slash character at the last-child */
+.logo li:last-child a::after {
+    display: none;
+}
+
+/* To add text details for the HOME/CONTACTUS */
+.logo li a {
+    color: #000;
+	font-weight: bold;
+	font-size: 0.9230769230769231em;
+    text-transform: uppercase;
+}
+
+.logo li a:hover {
+    text-decoration: none;
+}
+
+/* To add '|' slash after HOME link */
+.logo li a::after {
+    content: '|';
+    padding: 0 15px;
+}
+
+.logo li:last-child {
+	padding-right: 15px;
+}
+
+/* To remove SEARCH button from GCSE */
+.gsc-search-button{
+	display: none;
+}
+
+#gcse-search-result{
+	display: none;
+	position: absolute;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+
+/* To add border color for search box */
+input.gsc-input,
+.gsc-input-box,
+.gsc-input-box-hover,
+.gsc-input-box-focus {
+    border-color: #7f9ebb !important; /* Inorder to override GCSE inline property */
+}
+
+/* To change the google background image GCSE */
+#gsc-i-id1{	
+	background: rgb(255, 255, 255) url("../images/google-logo.png") no-repeat scroll left center !important;/* Inorder to override GCSE inline property */
+}
+
+/* Background-color for NAVBAR */
+.header-navbar{
+	background-color: #e6c36e;
+	margin-bottom: 0;
+	min-height: 40px;
+}
+
+/* To add NAVBAR text details  */
+.navbar-default .navbar-nav > li > a{
+	padding: 0;
+    color: #000;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li:hover {
+	background-color: #c8a551;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+	background-color: #c8a551;
+	color: #fff;
+}
+
+.navbar-default .navbar-nav > .active{
+	background-color: #c8a551;
+}
+
+/**
+* #.# 1.2 FOOTER Section
+*
+* FOOTER section contains Pages, Important Links, and Copyright, (whether or not it has media queries, etc.)
+*/
+
+.footer .footer-sitemap{
+	background-color: #e6c36e;
+}
+.footer .footer-disclaimer{
+	padding-top: 1%;
+	background-color: #947f4b;
+    color: #fff;
+    font-size: 0.8461538461538461em;
+}
+
+/* footer header styles */
+.footer-sitemap h4{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #9c793c;
+	font-family: 'droid-serif-bold';
+	font-size: 1.2307692307692308em;
+	text-transform: capitalize;
+}
+
+/* footer list styles */
+.bullet{
+    background: url(../images/bullet-footer-right.png)no-repeat left 6px;
+    padding: 0 15px 0 20px;
+	    list-style-type: none;
+}
+
+.footer-sitemap ul{
+	padding-left: 0;
+	line-height: 1.53;
+	font-family: "Arial-Regular";
+}
+.footer-sitemap a{
+	color: #000;
+	text-decoration: none;
+}
+
+/* footer copyright styles */
+.wrap-copyright{
+	text-align: center;
+	font-size: 0.9230769230769231em;
+}
+.wrap-copyright img{
+	padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/**
+* #.# 1.3 PARTNERS slider Section
+*
+* PARTNERS slider Section contains slick slider, (whether or not it has media queries, etc.)
+*/
+
+/* aligning right and left arrow in slider */
+
+.slick-arrow img{
+	position: absolute;
+	top: -50%;
+}
+
+
+/**
+* #.# 1.4 VIDEOS slider Section
+*
+* PARTNERS slider Section contains slick slider, (whether or not it has media queries, etc.)
+*/
+
+/* video styles */
+#slider-videos .column video,
+#slider-videos .column iframe{
+	border: 6px solid #d5ccb4;
+	width: 90%;
+}
+
+#slider-videos .column video[poster],
+#slider-videos .column iframe{
+	object-fit: fill;
+}
+
+#slider-videos .slick-current.slick-active video,
+#slider-videos .column video:hover,
+#slider-videos .column video:target,
+#slider-videos .column video:active,
+#slider-videos .slick-current.slick-active iframe,
+#slider-videos .column iframe:hover,
+#slider-videos .column iframe:target,
+#slider-videos .column iframe:active{
+	border: 6px solid #9a844a;
+}
+
+.slick-slider{
+	width: 95%;
+    /* margin: 0 auto; */
+	margin: 0 25px;
+}
+
+/* slick video slider button positioning -having media queries */
+.slick-prev, .slick-next {
+    width: 40px;
+	top: 20%;
+}
+
+#slider-videos .slick-prev {
+    left: -2.5%;
+}
+
+#slider-videos .slick-next {
+    right: -2.5%;
+}
+
+#slider-videos .slick-list.draggable{
+	margin: 0 2%;
+}
+
+/**
+* #.# 1.5 WELCOME image slider Section
+*
+* WELCOME image slider Section contains slick slider, (whether or not it has media queries, etc.)
+*/
+
+.welcome .welcome-wrap{
+	border-bottom: 6px solid #dcd7d3;
+    background-color: #eeeaeb;
+}
+#slider-welcome{
+	margin-left: 0;
+	margin-bottom: 0;
+    margin-right: 0;
+    width: 100%;
+	background-color: #eeeaeb;
+}
+#slider-welcome .column img {
+    width: 100%;
+}
+
+/* slick dot styling */
+#slider-welcome .slick-dots li button{
+	width: 18px;
+	height: 18px;
+	border: 3px solid #e2c06c;
+    border-radius: 50%;
+    background-color: #87705e;
+}
+
+#slider-welcome .slick-dots li button:before{
+	content: '';
+}
+
+#slider-welcome .slick-active button{
+	border-color: #fff !important; /*to override the slick-theme value*/
+}
+
+#slider-welcome .slick-dots li{
+	float: right;	
+}
+
+#slider-welcome .slick-dots{
+	padding: 15px;
+	bottom: 0;
+}
+
+/* WELCOME NOTE section */
+.welcome h3{
+	margin-top: 0;
+	color: #b9a071;
+	font-family: 'droid-serif-bold';
+	font-size: 1.5384615384615385em;
+	font-weight: bold;
+}
+
+.avatar{
+	border: 6px solid #d5d5d5;
+    padding: 8px 3px 4px 5px;
+	margin-right: 10px;
+    margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.welcome-note{
+	padding: 20px 20px 0 0;
+}
+
+.welcome-note p{
+	line-height: 1.7;
+}
+
+.welcome .read{
+	color: #91794a;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/**
+* #.# 1.6 MAIN SECTION includes- 
+*
+* EXHIBITION, NEWS, TWEETS, FACEBOOK, WEATHER, DATE , (whether or not it has media queries, etc.)
+*/
+
+.gutter-10{	/* have media-query */
+	margin-right: 10px;
+}
+
+.hr-vertical{
+    position: absolute;
+    height: 100%;
+    margin: 0;
+    right: 10px;
+	width: 1px;
+    background-color: #c5c5c5;
+}
+
+/* WEATHER */
+
+.weather-dtls{
+	padding: 28px 10px;
+	min-height: 192px;
+	border: 1px solid #d5d5d5;
+	background: url('../images/weather-bg.png') no-repeat;
+	background-size: cover;
+	text-align: center;
+	font-family: 'Verdana';
+}
+
+.sunny {
+	display: block;
+	margin: auto;
+	background: url('../images/weather-clouds.png') no-repeat 0 -8px;
+	width: 47px;
+	height: 29px;
+}
+
+.thunder {
+	display: block;
+	margin: auto;
+	background: url('../images/weather-clouds.png') no-repeat -93px 0;
+	width: 47px;
+	height: 43px;
+}
+
+.cloudy {
+	display: block;
+	margin: auto;
+	background: url('../images/weather-clouds.png') no-repeat -185px -2px;
+	width: 47px;
+	height: 39px;
+}
+
+.weather-dtls .day{
+	text-transform: uppercase;
+	font-size: 1.1538461538461537em;
+}
+
+.weather-report:not(.day) {
+	font-size: 0.8461538461538461em;
+}
+
+.weather-report.desc{
+	display: block;
+	text-transform: capitalize;
+}
+
+.weather-report.image{
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+/* GLIMPSES */
+
+figure img{
+	width: 100%;
+}
+
+.glimpses img{
+	border: 4px solid #cac4b4;
+}
+
+.glimpses .glimpse{
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+/* NEWS */
+
+.news-item {
+    background: url(../images/bullet-news-right.png)no-repeat left 6px;
+    padding: 0 15px 0 20px;
+	line-height: 1.7;
+}
+
+.news-item  a{
+	color: #044e8e;
+}
+
+.news p{
+	margin: 0;
+}
+
+.news p img{
+	margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.news-items{
+	padding: 0;
+	min-height: 70px;
+}
+
+.news h5{
+	margin-top: 0;
+	font-family: 'Arial-Bold';
+	font-weight: bold;
+}
+
+.news .more{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+	color: #044e8e;
+}
+
+.date-news{
+	font-size: 0.8461538461538461em;
+}
+
+.pagination>li:first-child>a,
+.pagination>li:last-child>a,
+.pagination li a{
+	margin-right: 5px;
+	padding: 3px 5px;
+    border: 1px solid #e1c787;
+    border-radius: 0;
+	background-color: #f4eede;
+    color: #b7974b;
+}
+
+.pagination{
+	margin: 0;
+}
+
+/* FACEBOOK FOLLOWERS */
+
+.fb-follower img{
+	width: 100%;
+}
+
+.fb-follower  figcaption{
+	width: 100%;
+	overflow: hidden;
+	color :#808080;
+	font-size:  0.8461538461538461em;
+	text-transform: capitalize;
+}
+
+.fb-followers{
+	padding: 0;
+}
+
+.fb-follow .fb-follower{
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.fb hr.line {
+    margin: 10px;
+}
+
+.m-r-5{
+	margin-right: 5px;
+}
+
+/* TWEETS */
+
+.latest-tweets{
+	padding: 0;
+}
+
+.latest-tweet{
+	border-bottom: 1px dotted #dddddd;
+	padding-top: 9px;
+    padding-bottom: 18px;
+}
+
+.latest-tweet:last-child{
+	border: 0;
+}
+
+/* TIME_DATE */
+.date-time .date{
+	margin: 0;
+	text-transform: capitalize;
+}
+
+.date-time .time{
+	margin: 0;
+	line-height: 1;
+	font-family: 'Myriad-Pro-Regular', serif-bold;
+	/* font-size: 4.615384615384615em; */
+	font-size: 4.230769230769231em;
+}
+
+
+@media all and (min-width: 992px){
+
+		/* Customize the navbar links to be fill the entire space of the .navbar */		
+		.navbar .nav {
+			display: table;
+			width: 100%;
+			margin: 0;
+		}
+		
+		.navbar .nav li {
+			display: table-cell;
+			float: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		} 
+		
+		/* apply padding top and bottom to HOME | CONTACTUS */
+		.logo li {
+			padding-top: 20px;
+			padding-bottom: 25px;
+		}
+}
+
+@media (max-width: 991px) {
+		/* .navbar-header {
+			float: none;
+		} */
+		
+		.navbar-left,.navbar-right {
+			float: none !important;
+		}
+		
+		/* customizing hamburger nav button  */
+		.navbar-toggle {
+			background-color: #eeeaeb;
+			position: absolute;
+			bottom: 0;
+			margin-left: 10px;
+		}		
+		
+		.navbar-toggle .icon-bar {
+			background-color: #676767;
+		}
+		
+		.navbar-collapse {
+			border-top: 0;
+		}
+		.navbar-fixed-top {
+			top: 0;
+			border-width: 0 0 1px;
+		}
+		.navbar-collapse.collapse {
+			display: none!important;
+		}
+		.navbar-nav {
+			margin-top: 0;
+		}
+		.navbar-nav>li {
+			padding: 15px 0;
+		}
+		.navbar-nav>li>a {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.collapse.in{
+			display:block !important;
+		}
+		
+		/* NAVBAR BUTTON background color */
+		.xs-navbar{
+			background-color: #e6c36e;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}		
+		
+		/* hide lg navbar div */
+		.header-navbar {
+			background-color: transparent;
+			min-height: auto;
+			margin-bottom: 0;
+		}
+		
+		/* slick video slider button positioning -having media queries */
+		.slick-prev {
+			left: 0;
+		}
+
+		.slick-next {
+			right: 0;
+		}
+		
+		.gutter-10{	
+			margin-right: 0;
+		}
+		
+}
